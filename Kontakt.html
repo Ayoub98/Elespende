@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style type="text/css">
+        .align-left {
+            text-align: left;
+        }
+        .align-center {
+            text-align: center;
+        }
+        .btn{
+            width: 40%;
+            border-radius: .5rem;
+        }
+    </style>
+</head>
+<body class="align-center">
+    <header>
+        <nav class="container">
+            <ul>
+                <li>LOGO</li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="index.html">Homepage</a>
+                </li>
+                <li>
+                    <a href="Registrierung.html">Registrierung</a>
+                </li>
+                <li>
+                    <a href="Kontakt.html">Kontakt</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="container">
+            <div class="align-left">
+                <p>Schicken uns über das Formular gerne eine E-Mail.</p>
+                <form>
+                    <label for="Name">
+                        <h6>Name</h6>
+                    </label>
+                    <input type="text" name="Name" placeholder="Name">
+                    <label for="email">
+                        <h6>E-Mail</h6>
+                    </label>
+                    <input type="text" name="Email" placeholder="Email">
+                    <small>Bitte geben Sie eine gültige E-Mail-Adresse ein, damit wir Ihnen antworten können.</small>
+                    <label for="Nachricht">
+                        <h6>Ihre Nachricht an uns</h6>
+                    </label>
+                    <textarea name="Nachricht" placeholder="Ihre Nachricht" id="Nachricht" cols="30" rows="10"></textarea>
+                    <label for="datei"></label>
+                    <input type="file" name="datei" id="datei">
+                    <button type="submit" style="width: 40%;" class="btn">
+                        Abschicken
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="#">Datenschutz</a>
+        &middot;
+        <a href="#">Impressum</a>
+    </footer>
+</body>
+</html>
