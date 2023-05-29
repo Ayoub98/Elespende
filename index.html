@@ -6,32 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-    <style type="text/css">
-        .text-color {
-
-        }
-        .heading-color{
-
-        }
-        .align-left {
-            text-align: left;
-        }
-        .align-center {
-            text-align: center;
-        }
-        .btn{
-            width: 40%;
-            border-radius: .5rem;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body class="align-center">
     <header>
         <nav class="container">
-            <ul>
-                <li>LOGO</li>
+            <ul  class="logo">
+                <li>
+                    <img src="Logo/logo_transparent.png" alt="Logo"></a>
+                </li>
             </ul>
             <ul>
                 <li>
@@ -39,6 +22,12 @@
                 </li>
                 <li>
                     <a href="Registrierung.html">Registrierung</a>
+                </li>
+                <li>
+                    <a href="#wie-geht-das">Wie geht das?</a>
+                </li>
+                <li>
+                    <a href="ueber-uns.html">Über uns</a>
                 </li>
                 <li>
                     <a href="Kontakt.html">Kontakt</a>
@@ -52,7 +41,7 @@
                 <div>
                     <div class="align-left">
                         <div class="headings">
-                            <h1>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</h1>
+                            <h1>Jederzeit, überall, elegant helfen.</h1>
                             <h2>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</h2>
                         </div>
                     </div>
@@ -64,17 +53,29 @@
             </div>
         </section>
         <section class="container">
-            <h4>So können Sie Kleidungsstücke zum Spenden registrieren:</h1>
+            <h4 id="wie-geht-das">So geht das:</h1>
             <div class="grid">
-                <article>Einpacken</article>
-                <article>Sammelfahrzeug rufen</article>
-                <article>An der Geschäftsstelle übergeben</article>
+                <article>
+                    <img src="Bilder/einpacken.png" alt="Einpacken">
+                    <footer>Kleidung einpacken</footer>
+                </article>
+                <article>
+                    <img src="Bilder/registrieren.png" alt="Registrieren">
+                    <footer>
+                        Spende
+                        <a href="Registrierung.html">registrieren</a>
+                    </footer>
+                </article>
+                <article>
+                    <img src="Bilder/uebergabe.png" alt="">
+                    <footer>Übergeben</footer>
+                </article>
             </div>
         </section>
     </main>
     <footer>
         <a href="#">Datenschutz</a>
-        &middot;
+        &nbsp;&middot;&nbsp;
         <a href="#">Impressum</a>
     </footer>
 </body>

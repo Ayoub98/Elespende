@@ -6,26 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrierung</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-    <style type="text/css">
-        .align-left {
-            text-align: left;
-        }
-        .align-center {
-            text-align: center;
-        }
-        .btn{
-            width: 40%;
-            border-radius: .5rem;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body class="align-center">
     <header>
         <nav class="container">
-            <ul>
-                <li>LOGO</li>
+            <ul class="logo">
+                <img src="Logo/logo_transparent.png" alt="Logo"></a>
             </ul>
             <ul>
                 <li>
@@ -42,6 +29,12 @@
     </header>
     <main>
         <section class="container">
+            <p>Registrieren Sie Ihre Spende anhand des Formulars. Die Übergabe Ihrer Spende kann innerhalb unserer 
+                <a href="Kontakt.html#oeffnungszeiten">Öffnungszeiten</a> 
+                erfolgen. Falls die Spende sich an einem Ort in
+                unserer Nähe befindet, dann können Sie die Abholadresse eingeben und das Sammelfahrzeug zu Ihnen rufen. Ihre Spende wird dann sorgfältig in unser Fahrzeug geladen
+                und weitergeleitet.
+            </p>
             <div class="align-left">
                 <form id="form">
                     <fieldset>
@@ -51,10 +44,14 @@
                             Übergabe an der Geschäftsstelle
                         </label>
                         <label for="abholung">
-                            <input type="radio" name="abholung">
+                            <input type="radio" name="uebergabe">
                             Abholung
                         </label>
                     </fieldset>
+                    <h6>Art der Kleidung</h6>
+                    <div>
+
+                    </div>
                 </form>
         </div>
         </section>

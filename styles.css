@@ -1,0 +1,27 @@
+html {
+    scroll-behavior: smooth;
+}
+h6 {
+    margin-top: 1.5rem;
+}
+.align-left, h3 {
+    text-align: left;
+}
+.align-center {
+    text-align: center;
+}
+.btn{
+    width: 40%;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.logo {
+    max-width: 20%;
+    max-height: 20%;
+    object-position: center;
+}
+p {
+    text-align: left;
+    text-align: justify;
+}
