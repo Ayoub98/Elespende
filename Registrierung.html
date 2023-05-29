@@ -22,6 +22,12 @@
                     <a href="Registrierung.html">Registrierung</a>
                 </li>
                 <li>
+                    <a href="index.html#wie-geht-das">Wie geht das?</a>
+                </li>
+                <li>
+                    <a href="ueber-uns.html">Über uns</a>
+                </li>
+                <li>
                     <a href="Kontakt.html">Kontakt</a>
                 </li>
             </ul>
@@ -29,37 +35,87 @@
     </header>
     <main>
         <section class="container">
-            <p>Registrieren Sie Ihre Spende anhand des Formulars. Die Übergabe Ihrer Spende kann innerhalb unserer 
+            <p>
+                Registrieren Sie Ihre Spende anhand des Formulars. Die Übergabe Ihrer Spende kann innerhalb unserer 
                 <a href="Kontakt.html#oeffnungszeiten">Öffnungszeiten</a> 
                 erfolgen. Falls die Spende sich an einem Ort in
-                unserer Nähe befindet, dann können Sie die Abholadresse eingeben und das Sammelfahrzeug zu Ihnen rufen. Ihre Spende wird dann sorgfältig in unser Fahrzeug geladen
+                unserer Nähe befindet, dann können Sie die Abholadresse eingeben und das Sammelfahrzeug zu Ihnen rufen. 
+                Ihre Spende wird dann sorgfältig in unser Fahrzeug geladen
                 und weitergeleitet.
             </p>
             <div class="align-left">
-                <form id="form">
+                <form id="registrierungsform" onsubmit="pruefe();return false" action="">
                     <fieldset>
-                        <h6>Art der Übergabe</h6>
+                        <label for="art-uebergabe">
+                            <h6>Art der Übergabe</h6>
+                        </label>
                         <label for="uebergabe">
-                            <input type="radio" name="uebergabe" checked>
+                            <input type="radio" name="art-uebergabe" id="uebergabe" onclick="anpassen()">
                             Übergabe an der Geschäftsstelle
                         </label>
                         <label for="abholung">
-                            <input type="radio" name="uebergabe">
+                            <input type="radio" name="art-uebergabe" id="abholung" onclick="anpassen()">
                             Abholung
                         </label>
                     </fieldset>
-                    <h6>Art der Kleidung</h6>
-                    <div>
-
+                    <label for="adresse">
+                        <h6>Abholadresse</h6>
+                    </label>
+                    <div class="grid">
+                        <input type="text" name="adresse" id="adresse" placeholder="Adresse" disabled>
+                        <input type="text" name="plz" id="plz" placeholder="Postleitzahl" disabled>
                     </div>
+                    <label for="kleidungsart">
+                        <h6>Art der Kleidung</h6>
+                    </label>
+                    <select name="kleidungsart" id="kleidungsart" required>
+                        <option value="" selected>Kleidungsart auswählen</option>
+                        <optgroup label="Kleidung">
+                            <option value="kinder">Kinderbekleidung</option>
+                            <option value="damen">Damenbekleidung</option>
+                            <option value="herren">Herrenbekleidung</option>
+                            <option value="unisex">Unisexbekleidung</option>
+                        </optgroup>
+                        <optgroup label="Schuhe">
+                            <option value="damenshuhe">Damenschuhe</option>
+                            <option value="herrenschuhe">Herrenschuhe</option>
+                            <option value="unisexshuhe">Unisexschuhe</option>
+                        </optgroup>
+                        <optgroup label="Accessoires">
+                            <option value="schals">Schal</option>
+                            <option value="muetzen">Mütze</option>
+                            <option value="handschuhe">Handschuhe</option>
+                            <option value="regenschirm">Regenschirm</option>
+                        </optgroup>
+                    </select>
+                    <label for="kriesengebiet">
+                        <h6>Kriesengebiet</h6>
+                    </label>
+                    <select name="kriesengebiet" id="kriesengebiet" required>
+                        <option value="">Kriesengebiet auswählen</option>
+                        <option value="AFG">Afghanistan</option>
+                        <option value="ETH">Äthiopien</option>
+                        <option value="BFA">Burkina Faso</option>
+                        <option value="COD">Demokratische Republik Kongo</option>
+                        <option value="HTI">Haiti</option>
+                        <option value="YEM">Jemen</option>
+                        <option value="SOM">Somalia</option>
+                        <option value="SYR">Syrien</option>
+                        <option value="SSD">Südsudan</option>
+                        <option value="UKR">Ukraine</option>
+                    </select>
+                    <button type="submit" class="btn">
+                        Spende jetzt registrieren
+                    </button>
                 </form>
-        </div>
+            </div>
         </section>
     </main>
     <footer>
         <a href="#">Datenschutz</a>
-        &middot;
+        &nbsp;&middot;&nbsp;
         <a href="#">Impressum</a>
     </footer>
+    <script src="script.js" defer></script>
 </body>
 </html>
