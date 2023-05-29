@@ -33,7 +33,7 @@ function anpassen() {
 function pruefe() {
     if (abholung.checked) {
         if (checkAdresse()) {
-            hh
+            window.location.replace("danke.html");
         } else {
             alert('Sie sind leider nicht in unserer Nähe, daher kann die Abholung nicht erfolgen. Es tut uns leid!');
         }
