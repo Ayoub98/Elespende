@@ -8,6 +8,9 @@ p {
     text-align: left;
     text-align: justify;
 }
+table {
+    width: 75%;
+}
 .align-left, h3 {
     text-align: left;
 }
