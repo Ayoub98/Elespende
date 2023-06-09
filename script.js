@@ -1,10 +1,9 @@
-// Definition von Variablen, die in verschiedenen Methoden benötigt werden
+// Definition von Variablen, die in verschiedenen Methoden benötigt werden.
 
-const adresse = document.getElementById('adresse');
-const plz = document.getElementById('plz');
-const abholung = document.getElementById('abholung');
-const kleidungsart = document.getElementById('kleidungsart');
-const krisengebiet = document.getElementById('krisengebiet');
+adresse = document.getElementById('adresse');
+plz = document.getElementById('plz');
+abholung = document.getElementById('abholung');
+spende = {art:'', gebiet:''};
 
 // Script für Kontakt.html
 
@@ -41,6 +40,9 @@ function anpassen() {
 
 function pruefe() {
     const uebergabe = document.getElementById('uebergabe');
+    const kleidungsart = document.getElementById('kleidungsart').value;
+    const krisengebiet = document.getElementById('krisengebiet').value;
+
     if (abholung.checked === false && uebergabe.checked === false) {
         alert('Bitte wählen Sie aus, wie Sie die Spende übergeben möchten.');
         return false;
@@ -55,17 +57,17 @@ function pruefe() {
             return false;
         }
     }
-    if (kleidungsart.value === '0') {
+    if (kleidungsart === '0') {
         alert('Bitte wählen Sie die Kleidungsart aus!');
         return false;
     }
-    if (krisengebiet.value === '0') {
+    if (krisengebiet === '0') {
         alert('Bitte wählen Sie ein Krisengebiet aus!');
         return false;
     }
     if (checkPLZ() || uebergabe.checked) {
+        console.log('Hi');
         window.location.replace("danke.html");
-        ausfuellen();
     } else {
         alert('Die Abholadresse befindet sich leider nicht in unserer Nähe, daher kann die Abholung nicht erfolgen. Es tut uns leid!');
         return false;
@@ -76,11 +78,13 @@ function checkPLZ() {
     return plz.value.substr(0, 2) === '70';
 }
 
+function registriereSpende() {
+}
+
 // Script für danke.html
 
 function ausfuellen() {
-    const trElement = document.getElementById('uebersicht-kleidungsart');
-    const neueZelle = document.createElement('td');
-    neueZelle.innerHTML = kleidungsart.value;
-    trElement.appendChild(neueZelle);
+    //document.getElementById('uebersicht-kleidungsart').innerHTML = 'bbbb';
+
 }
+

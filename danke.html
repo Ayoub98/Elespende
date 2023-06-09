@@ -7,8 +7,9 @@
     <title>Wir sagen danke!</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="text/javascript" src="script.js" defer></script>
 </head>
-<body class="align-center">
+<body class="align-center" onload="ausfuellen()">
     <header>
         <nav class="container">
             <ul  class="logo">
@@ -41,8 +42,9 @@
             <p>Im Folgenden finden Sie eine Zusammenfassung Ihrer Spende:</p>
             <table role="grid">
                 <tbody>
-                    <tr id="uebersicht-kleidungsart">
+                    <tr>
                         <th scope="row">Art der Kleiderspende</th>
+                        <td id="uebersicht-kleidungsart"></td>
                     </tr>
                     <tr>
                         <th scope="row">Krisengebiet</th>
