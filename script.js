@@ -66,8 +66,12 @@ function pruefe() {
         return false;
     }
     if (checkPLZ() || uebergabe.checked) {
-        console.log('Hi');
-        window.location.replace("danke.html");
+        let datum = new Date();
+        localStorage.setItem('kleidungsart', kleidungsart);
+        localStorage.setItem('krisengebiet', krisengebiet);
+        localStorage.setItem('datum', datum.toLocaleDateString('de-DE'));
+        localStorage.setItem('uhrzeit', datum.getHours() + ':' + datum.getMinutes() + ' Uhr');
+        window.location.replace('danke.html');
     } else {
         alert('Die Abholadresse befindet sich leider nicht in unserer Nähe, daher kann die Abholung nicht erfolgen. Es tut uns leid!');
         return false;
@@ -84,7 +88,10 @@ function registriereSpende() {
 // Script für danke.html
 
 function ausfuellen() {
-    //document.getElementById('uebersicht-kleidungsart').innerHTML = 'bbbb';
-
+    document.getElementById('uebersicht-kleidungsart').innerHTML = localStorage.getItem('kleidungsart');
+    document.getElementById('uebersicht-krisengebiet').innerHTML = localStorage.getItem('krisengebiet');
+    document.getElementById('datum').innerHTML = localStorage.getItem('datum');
+    document.getElementById('uhrzeit').innerHTML = localStorage.getItem('uhrzeit');
+    localStorage.clear();
 }
 
