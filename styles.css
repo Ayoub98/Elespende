@@ -17,6 +17,11 @@ table {
 .align-center {
     text-align: center;
 }
+.actual-page {
+    background-color: rgb(225,242,247);
+    border-color: rgb(225,242,247);
+    border-radius: 1px;
+}
 .btn{
     width: 40%;
     border-radius: .5rem;
