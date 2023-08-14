@@ -1,11 +1,15 @@
-// Definition von Variablen, die in verschiedenen Methoden benötigt werden.
+///////////////////////////////////////////////////////////////////////////////
+// Definition von Variablen, die in verschiedenen Methoden benötigt werden. //
+/////////////////////////////////////////////////////////////////////////////
 
 adresse = document.getElementById('adresse');
 plz = document.getElementById('plz');
 abholung = document.getElementById('abholung');
 spende = {art:'', gebiet:''};
 
-// Script für Kontakt.html
+//////////////////////////////
+// Script für Kontakt.html //
+////////////////////////////
 
 function check() {
     const besuchername = document.getElementById('name');
@@ -26,7 +30,9 @@ function check() {
     }
 }
 
-// Script für Registrierung.html
+////////////////////////////////////
+// Script für Registrierung.html //
+//////////////////////////////////
 
 function anpassen() {
     if (abholung.checked) {
@@ -82,10 +88,9 @@ function checkPLZ() {
     return plz.value.substr(0, 2) === '70';
 }
 
-function registriereSpende() {
-}
-
-// Script für danke.html
+////////////////////////////
+// Script für danke.html //
+//////////////////////////
 
 function ausfuellen() {
     document.getElementById('uebersicht-kleidungsart').innerHTML = localStorage.getItem('kleidungsart');
@@ -94,4 +99,3 @@ function ausfuellen() {
     document.getElementById('uhrzeit').innerHTML = localStorage.getItem('uhrzeit');
     localStorage.clear();
 }
-
